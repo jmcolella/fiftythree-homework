@@ -14,4 +14,4 @@ Homework assignment for FiftyThree Software Engineer position
 - If I had more time:
     - I would devise a better solution for handling different messages for each modal. Each message is passed as an argument into a function, but that gets a bit unwieldly if there are a bunch of modals with a lot of text for each. 
     - I would have consolidated all of the buttons into one reusable component since they all have pratically the same functionality.
-    - I would have liked to incorporarte tests for both parts but I didn't have enough time to write them.
+    - I would have liked to incorporarte tests for both parts of the challenge.
