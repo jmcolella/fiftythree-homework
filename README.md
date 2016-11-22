@@ -10,4 +10,5 @@ Homework assignment for FiftyThree Software Engineer position
 
 # Additional Notes
 - For creating the modal, I found some quick CSS through W3 and imported that into the application.
-- If I had more time, I would devise a better solution for handling different messages for each modal. Each message is passed into a function, but that gets a bit unwieldly if there are a bunch of modals with a lot of text for each. 
+- If I had more time, I would devise a better solution for handling different messages for each modal. Each message is passed as an argument into a function, but that gets a bit unwieldly if there are a bunch of modals with a lot of text for each. 
+- I would also have liked to consolidate all of the buttons into one reusable component since they all have pratically the same functionality.
