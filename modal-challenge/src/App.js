@@ -20,11 +20,13 @@ class App extends Component {
       message: message
     })
   }
-  handleCloseModal() {
-    this.setState({
-      modal: false,
-      message: ""
-    });
+  handleCloseModal( event ) {
+    if ( event.target.nodeName === 'BUTTON' || event.target.attributes.class.nodeValue.includes('modal-container') ) {
+      this.setState({
+        modal: false,
+        message: ""
+      });
+    }
   }
   render() {
     return (
@@ -41,7 +43,7 @@ class App extends Component {
         >
           German Beer Law
         </button>
-        
+
         <button
           onClick={
             () => this.handleClickButton( "Lambic is a sour style that is ingrained in Belgian beer history. To be truly lambic, the beer must be brewed in the traditional Payottenland region in Belgium and make use of wild-fermentation techniques. As it has been done since the brew's inception, lambic is fermented strictly with airbone microbes in the region, truly giving this style its own sense of terrior." )
@@ -50,7 +52,7 @@ class App extends Component {
           Belgian Beer
         </button>
 
-        <div className={ (this.state.modal ? "modal-show " : "modal-hide ") + "modal-container" }>
+        <div onClick={ this.handleCloseModal } className={ (this.state.modal ? "modal-show " : "modal-hide ") + "modal-container" }>
           <ModalContent
             message={ this.state.message }
             onCloseModal={ this.handleCloseModal } />

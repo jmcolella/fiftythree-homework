@@ -3,17 +3,17 @@ import React from 'react';
 const ModalContent = ( props ) => {
   return (
     <div className="modal-content">
-      <p>{ props.message }</p>
+      <p className="modal-text">{ props.message }</p>
       <button
         onClick={
-          () => props.onCloseModal()
+          props.onCloseModal
         }
       >
         Accept
       </button>
       <button
         onClick={
-          () => props.onCloseModal()
+          props.onCloseModal
         }
       >
         Dismiss
